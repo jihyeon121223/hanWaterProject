@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>  <!-- 1. 프로젝트 생성하면서 내가설정한 것들 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
+        <artifactId>spring-boot-starter-parent</artifactId> <!-- spring-boot-starter 패스로 YAML 라이브러리를 줌 -->
         <version>2.7.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
@@ -13,23 +13,27 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>discoveryServer</name>
     <description>discoveryServer</description>
-    <properties>
+    <properties>     <!-- property :: 응용파일 저장 위한 확장자 -->
         <java.version>11</java.version>
         <spring-cloud.version>2021.0.3</spring-cloud.version>
     </properties>
-    <dependencies>
-        <dependency>
+
+
+    <dependencies>    <!-- 2. dependency :: 프로젝트의 터미널 요소 간의 링크. 디펜던시 추가 가능 -->
+        <dependency>    <!-- 디펜던시 1 Eureka Discovery Client -->
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
 
-        <dependency>
+        <dependency>    <!-- 디펜던시 2 Spring Web -->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <dependencyManagement>
+
+
+    <dependencyManagement>  <!-- dependencyManagement :: 디펜던시 버전 관리 -->
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -41,7 +45,7 @@
         </dependencies>
     </dependencyManagement>
 
-    <build>
+    <build>     <!-- 3. build :: 독립(standalone) 소프트웨어 가공물로 변환 -->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
