@@ -25,7 +25,7 @@
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
 
-        <dependency>    <!-- 디펜던시 2 Spring Web -->
+        <dependency>    <!-- 디펜던시 2 Spring Test :: 기타 유용한 라이브러리를 모두 가져옵니다 ㅋㅋㅋ -->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
